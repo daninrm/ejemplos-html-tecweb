@@ -2,50 +2,85 @@
 <html lang="en">
 
 <head>
-    <title> Form Example</title>
+    <title>Form example</title>
 </head>
 
 <body>
     <h1>Register</h1>
-
-    <form>
-
-        <label>First Name</label>
-        <input type="text" name="First Name">
-
-        <label>Last Name</label>
-        <input type="text" name="Last Name">
-
+    <form method="GET">
+        <label for="first name">First name: *</label>
+        <input type="text" name="first name" id="first name" required placeholder="Your first name">
+        <label for="last name">Last name:</label>
+        <input type="text" name="last name" id="last name" placeholder="Your last name">
 
         <div>
-            <label>Male</label>
-            <input type="radio" name="gender">
-            <label>Female</label>
-            <input type="radio" name="gender">
-            <label>Other</label>
-            <input type="radio" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female">
+            <label for="other">Other</label>
+            <input type="radio" name="gender" id="other">
         </div>
 
         <div>
-            <label>Email:</label>
-            <input type="email">
-
-            <label>Password:</label>
-            <input type="password" name="password">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Your email">
+            <label for="password">Password: *</label>
+            <input type="password" name="password" id="password" required placeholder="At least 4 characters" minlength="4">
         </div>
 
+        <div>
+            <label for="birthday">Birthday:</label>
+            <select name="month">
+                <option>Month</option>
+                <option>----</option>
+                <option value="1">Jan</option>
+                <option value="2">Feb</option>
+                <option value="3">Mar</option>
+                <option value="4">Apr</option>
+                <option value="5">May</option>
+                <option value="6">Jun</option>
+                <option value="7">Jul</option>
+                <option value="8">Aug</option>
+                <option value="9">Sep</option>
+                <option value="10">Oct</option>
+                <option value="11">Nov</option>
+                <option value="12">Dec</option>
+            </select>
+            <select name="day">
+                <option>Day</option>
+                <option>----</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select name="year">
+                <option value="1">Year</option>
+                <option value="2">1998</option>
+                <option value="3">1999</option>
+                <option value="4">2000</option>
+                <option value="5">2001</option>
+            </select>
+        </div>
 
-        <!--Boton para enviar la informacion-->
+        <label for="terms-conditions">I agree to terms and conditions</label>
+        <input id="terms-conditions" type="checkbox">
+        
+        <p>
+            *This field is required
+        </p>
+     
         <input type="submit" value="Submit">
     </form>
-    <div>
-        <a href="index.html"> Inicio </a>
 
+    <div>
+        <a href="index.html">Home</a>
         <p>
             <a href="https://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
                     alt="Valid XHTML 1.0!" height="31" width="88" /></a>
         </p>
     </div>
 </body>
-
 </html>
